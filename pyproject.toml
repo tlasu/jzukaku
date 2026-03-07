@@ -1,0 +1,29 @@
+[project]
+name = "jzukaku"
+version = "0.1.0"
+description = "国土基本図図郭コード計算ライブラリ（平面直角座標系 JGD2011 ベース）"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyproj>=3.6",
+    "shapely>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+jzukaku = "jzukaku.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "ruff>=0.15.5",
+]

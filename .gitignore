@@ -1,0 +1,12 @@
+# uv / venv
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+*.egg
+
+# uv
+uv.lock
