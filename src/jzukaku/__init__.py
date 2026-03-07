@@ -28,7 +28,7 @@ from .constants import (
     SUPPORTED_LEVELS,
 )
 from .jprcs import JGD2011_EPSG, get_zone_for_location, latlon_to_jprcs
-from .zukaku import ZukakuInfo, latlon_to_zukaku, xy_to_zukaku
+from .zukaku import ZukakuInfo, bbox_to_zukaku, latlon_to_zukaku, xy_to_zukaku
 
 __all__ = [
     "ZukakuInfo",
@@ -44,6 +44,7 @@ __all__ = [
     "get_zone_for_location",
     "xy_to_zukaku",
     "latlon_to_zukaku",
+    "bbox_to_zukaku",
 ]
 
 __version__ = "0.1.0"
