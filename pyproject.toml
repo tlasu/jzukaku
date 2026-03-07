@@ -1,6 +1,6 @@
 [project]
 name = "jzukaku"
-version = "0.1.0"
+version = "0.1.1"
 description = "国土基本図図郭コード計算ライブラリ（平面直角座標系 JGD2011 ベース）"
 readme = "README.md"
 requires-python = ">=3.11"
