@@ -10,3 +10,4 @@ dist/
 
 # uv
 uv.lock
+.env
