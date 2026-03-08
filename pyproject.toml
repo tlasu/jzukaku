@@ -4,9 +4,29 @@ version = "0.1.1"
 description = "国土基本図図郭コード計算ライブラリ（平面直角座標系 JGD2011 ベース）"
 readme = "README.md"
 requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "tlasu" },
+]
+keywords = ["gis", "map", "japan", "zukaku", "jgd2011", "coordinate"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: GIS",
+]
 dependencies = [
     "pyproj>=3.6",
 ]
+
+[project.urls]
+Homepage = "https://github.com/tlasu/jzukaku"
+Repository = "https://github.com/tlasu/jzukaku"
+Issues = "https://github.com/tlasu/jzukaku/issues"
 
 [project.optional-dependencies]
 dev = [

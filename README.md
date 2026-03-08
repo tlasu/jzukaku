@@ -16,17 +16,14 @@
 
 ## インストール
 
-[uv](https://docs.astral.sh/uv/) を使う場合（推奨）:
-
 ```bash
-uv sync
+pip install jzukaku
 ```
 
-これでプロジェクトがエディタブルインストールされ、`uv run` で実行できます。
+開発用（uv を使う場合）:
 
 ```bash
-# 依存のみインストール（パッケージをインストールしない場合）
-uv pip install -e .
+uv sync --extra dev
 ```
 
 ## 使い方
@@ -80,4 +77,4 @@ uv run ruff check src/
 
 ## ライセンス
 
-プロジェクトのライセンスに従います。
+MIT License
