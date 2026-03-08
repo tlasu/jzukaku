@@ -1,5 +1,4 @@
 #%%
-from webbrowser import get
 import pyproj
 # %%
 def get_jprcs_zone(zone):

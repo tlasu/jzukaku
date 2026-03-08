@@ -16,7 +16,6 @@
 
 import math
 from dataclasses import dataclass
-from typing import List, Optional, Union
 
 from .constants import SUPPORTED_LEVELS
 from .jprcs import get_zone_for_location, latlon_to_jprcs
@@ -192,7 +191,7 @@ def xy_to_zukaku(
 def latlon_to_zukaku(
     lat: float,
     lon: float,
-    zone: Optional[int] = None,
+    zone: int | None = None,
     level: int = 500,
 ) -> ZukakuInfo:
     """
@@ -215,10 +214,10 @@ def latlon_to_zukaku(
 
 
 def bbox_to_zukaku(
-    bounds: Union[List[float], tuple[float, float, float, float]],
-    zone: Optional[int] = None,
+    bounds: list[float] | tuple[float, float, float, float],
+    zone: int | None = None,
     level: int = 500,
-) -> List[str]:
+) -> list[str]:
     """
     バウンディングボックス（緯度経度）と重なる図郭コードの一覧を返す。
 
@@ -264,7 +263,7 @@ def bbox_to_zukaku(
     c50_min = max(0, math.ceil((y_lo + 160000) / tile_w_50000) - 1)
     c50_max = min(7, math.floor((y_hi + 160000) / tile_w_50000))
 
-    codes: List[str] = []
+    codes: list[str] = []
     tile_h_5000, tile_w_5000 = 3000, 4000
 
     for r50 in range(r50_min, r50_max + 1):

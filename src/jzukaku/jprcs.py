@@ -6,7 +6,6 @@
 """
 
 import math
-from typing import Optional, Tuple
 
 from pyproj import Transformer
 
@@ -35,8 +34,8 @@ def _get_transformer(zone: int) -> Transformer:
 def latlon_to_jprcs(
     lat: float,
     lon: float,
-    zone: Optional[int] = None,
-) -> Tuple[float, float]:
+    zone: int | None = None,
+) -> tuple[float, float]:
     """
     緯度経度を平面直角座標系のXY座標に変換する（pyproj 使用）。
 
@@ -61,7 +60,7 @@ def latlon_to_jprcs(
     return northing, easting
 
 
-def _latlon_to_jprcs_pure(lat: float, lon: float, zone: int) -> Tuple[float, float]:
+def _latlon_to_jprcs_pure(lat: float, lon: float, zone: int) -> tuple[float, float]:
     """
     純 Python による Gauss-Krüger 変換（pyproj 不使用のフォールバック）。
 
